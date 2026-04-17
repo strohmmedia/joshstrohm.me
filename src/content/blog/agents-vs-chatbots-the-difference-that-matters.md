@@ -4,7 +4,7 @@ date: "2026-04-08"
 excerpt: "Everyone's calling everything an agent now. Here's how to tell if you're getting a helpful tool or just a fancy chatbot."
 readTime: "5 min read"
 featured: false
-image: "/images/blog/agents-vs-chatbots.jpg"
+image: "/images/blog/automation-workflows.jpg"
 ---
 
 ## The Agent-Washing Problem
