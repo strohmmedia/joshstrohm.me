@@ -9,7 +9,7 @@ image: "/images/blog/my-photo.jpg"
 
 ## Not All Automation Is Equal
 
-When you're just getting started with AI automation, it's easy to get excited and try to automate everything at once. Don't. The highest-ROI automations are the ones that save the most time and reduce the most friction.
+When you start with AI automation, it's easy to want to automate everything. Start small. Focus on the processes that save the most time and reduce the most work.
 
 Here are the five workflows I see deliver the biggest returns first:
 
@@ -25,11 +25,11 @@ This alone can increase conversion by 20-40%.
 
 ### 2. Invoice and Payment Follow-ups
 
-Chasing payments is soul-crushing work. Automate reminders at 7, 14, and 30 days. Include payment links. Escalate to human follow-up only when necessary.
+Chasing payments is tiring work. Automate reminders at 7, 14, and 30 days. Include payment links. Send to a human only when you need to.
 
 ### 3. Meeting Scheduling
 
-If you're still going back and forth on calendar invites, stop. Use a scheduling tool with automated calendar coordination. Your team loses 2-5 hours per week on scheduling friction.
+Stop sending emails back and forth to schedule meetings. Use a scheduling tool instead. Your team can save 2 to 5 hours per week on this alone.
 
 ### 4. Data Entry and Sync
 
@@ -40,7 +40,7 @@ Copy-pasting between apps is the most common waste I see. Identify your top 3 ap
 The first 7 days with a new customer define their experience. Build an automated sequence that:
 - Sends welcome information
 - Provides onboarding resources
-- Checks in at day 3 and day 7
-- Escalates to support if no engagement
+- Check in at day 3 and day 7
+- Alert support if there is no response.
 
 Start with one of these. Prove it works. Then expand.

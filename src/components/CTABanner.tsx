@@ -14,7 +14,8 @@ export default function CTABanner() {
             Ready to automate what slows you down?
           </h2>
           <p className="text-lg text-text2 mb-8">
-            Get your free automation audit. No calls required-I&apos;ll respond within 24 hours.
+            Get your free automation audit. No calls needed. I will respond
+            within 24 hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">

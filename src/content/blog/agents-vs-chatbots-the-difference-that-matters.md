@@ -9,7 +9,7 @@ image: "/images/blog/automation-workflows.jpg"
 
 ## The Agent-Washing Problem
 
-Every AI product is calling itself an "agent" now. But most of them are just chatbots with better prompts. Here's how to tell the difference:
+Every AI product calls itself an "agent" now. But most are just chatbots with better prompts. Here's how to tell the difference:
 
 ### A Chatbot Does This:
 - Responds to prompts
@@ -18,20 +18,20 @@ Every AI product is calling itself an "agent" now. But most of them are just cha
 - That's about it
 
 ### An Agent Does This:
-- Takes autonomous action - can execute tasks without human approval
-- Makes decisions - can choose between multiple paths based on criteria
-- Uses tools - can call APIs, write to databases, send messages
-- Handles errors - can retry, fall back, escalate when things go wrong
-- Maintains state - remembers what it's done across sessions
+- Takes autonomous action: it can execute tasks without human approval
+- Makes decisions: it can choose between multiple paths based on criteria
+- Uses tools: it can call APIs, write to databases, and send messages
+- Handles errors: it can retry, fall back, or escalate when things go wrong
+- Maintains state: it remembers what it's done across sessions
 
 ### The Real Question
 
-When someone says "we built an agent," ask: "What tools does it have access to, and what has it done without you asking?"
+When someone says they built an agent, ask what tools it has and what it can do without you asking.
 
-If the answer is "it answers questions" - you have a chatbot.
+If the answer is that it only answers questions, you have a chatbot.
 
-If the answer is "it booked meetings, updated your CRM, sent follow-ups, and flagged issues" - you have an agent.
+If the answer is that it booked meetings, updated your CRM, and sent follow-ups, you have an agent.
 
 ### What This Means For You
 
-Don't pay agent prices for chatbot functionality. But also don't settle for chatbots when you actually need agents. The difference is hundreds of hours of productivity per year.
+Don't pay for an agent if you're only getting a chatbot. But don't settle for a chatbot when you need an agent. The difference can save you hundreds of hours each year.

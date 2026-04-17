@@ -105,7 +105,7 @@ export default function ContactPage() {
               </RevealOnScroll>
               <RevealOnScroll delay={100}>
                 <p className="text-xl text-text2 mb-8">
-                  No calls required. I&apos;ll respond within 24 hours.
+                  No calls needed. I will get back to you within 24 hours.
                 </p>
               </RevealOnScroll>
 

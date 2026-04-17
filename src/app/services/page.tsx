@@ -23,7 +23,7 @@ const services = [
     id: "agents",
     number: "02",
     title: "Custom AI Agents",
-    description: "Intelligent agents that reason, decide, and execute. Not chatbots-autonomous systems that handle complex tasks on your behalf.",
+    description: "Intelligent agents that reason, decide, and execute. These are autonomous systems that handle complex tasks for you.",
     deliverables: [
       "Agent architecture and tool design",
       "Knowledge base integration",
@@ -36,7 +36,7 @@ const services = [
     id: "strategy",
     number: "03",
     title: "AI Strategy & Roadmapping",
-    description: "Clear strategic guidance so you know where to invest. No fluff-just a practical plan based on your business reality.",
+    description: "Clear guidance so you know where to invest. This is a practical plan based on your business needs.",
     deliverables: [
       "Operations audit and opportunity mapping",
       "ROI analysis and prioritization",
@@ -49,7 +49,7 @@ const services = [
     id: "optimization",
     number: "04",
     title: "Ongoing Optimization",
-    description: "Automation is never &ldquo;done.&rdquo; I keep your systems running at peak efficiency as your business evolves.",
+    description: "Automation is a continuous process. I keep your systems running efficiently as your business grows.",
     deliverables: [
       "Regular performance tuning",
       "Edge case identification and handling",
@@ -64,7 +64,7 @@ const comparison = [
   { feature: "Setup time", diy: "20+ hours", inhouse: "2-4 weeks", josh: "1-2 weeks" },
   { feature: "Customization", diy: "Limited", inhouse: "Full", josh: "Full" },
   { feature: "Ongoing support", diy: "You", inhouse: "Included", josh: "Included" },
-  { feature: "Cost structure", diy: "Low upfront, high time", inhouse: "$80k+/year", josh: "$3k-10k/project" },
+  { feature: "Cost structure", diy: "Low cost, high time", inhouse: "$80k+/year", josh: "$3k-10k/project" },
   { feature: "Maintenance", diy: "You", inhouse: "Included", josh: "Included" },
 ];
 

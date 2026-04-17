@@ -106,7 +106,7 @@ export default function Home() {
             
             <RevealOnScroll delay={200}>
               <p className="text-xl md:text-2xl text-text2 leading-relaxed mb-8 max-w-2xl">
-                Custom workflows, intelligent agents, and automations engineered for how your company actually operates.
+                I build custom workflows and AI agents that fit how your business actually works.
               </p>
             </RevealOnScroll>
             
@@ -140,7 +140,7 @@ export default function Home() {
         <Container>
           <RevealOnScroll>
             <h2 className="text-3xl md:text-4xl font-bold mb-12 max-w-2xl">
-              Your team is drowning in work that shouldn&apos;t require a human.
+              Your team is losing time to work that can be automated.
             </h2>
           </RevealOnScroll>
           
@@ -163,7 +163,7 @@ export default function Home() {
         <Container>
           <RevealOnScroll>
             <h2 className="text-3xl md:text-4xl font-bold mb-12">
-              Four services. One outcome: your business runs cleaner.
+              Four services to help your business run more efficiently.
             </h2>
           </RevealOnScroll>
           
@@ -235,7 +235,7 @@ export default function Home() {
           
           <RevealOnScroll delay={200}>
             <blockquote className="text-xl md:text-2xl text-text text-center max-w-2xl mx-auto italic border-l-4 border-accent pl-6">
-              &ldquo;If it doesn&apos;t save real time or make real money, it doesn&apos;t ship.&rdquo;
+              &ldquo;If it doesn&apos;t save time or make money, I don&apos;t build it.&rdquo;
               <footer className="text-base text-text2 mt-4 not-italic">- Josh Strohm</footer>
             </blockquote>
           </RevealOnScroll>

@@ -30,9 +30,8 @@ export default function Footer() {
               JS
             </Link>
             <p className="text-text2 text-sm leading-relaxed">
-              Engineered Intelligence. Automated Execution. I build custom AI
-              automations and agents that remove manual work and scale your
-              operations.
+              I build custom AI tools and agents that stop manual work and help
+              you grow.
             </p>
           </div>
 

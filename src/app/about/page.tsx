@@ -16,7 +16,7 @@ const principles = [
   {
     icon: "🔍",
     title: "No black boxes",
-    description: "You own everything. Every workflow, every agent, every integration-is documented and accessible.",
+    description: "You own everything. Every workflow, every agent, and every integration is documented and accessible.",
   },
   {
     icon: "🚀",
@@ -84,7 +84,7 @@ export default function AboutPage() {
               </h1>
               
               <p className="text-xl md:text-2xl text-text2 max-w-xl leading-relaxed mb-10">
-                Hi, I'm Josh Strohm. I bridge the gap between complex AI technology and real-world business growth through intelligent automation.
+                Hi, I'm Josh Strohm. I bridge the gap between complex AI and real business growth through smart automation.
               </p>
 
               <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-lg">
@@ -139,21 +139,21 @@ export default function AboutPage() {
           <RevealOnScroll>
             <div className="max-w-3xl mx-auto md:text-center mb-12">
                <span className="text-accent font-mono text-sm uppercase tracking-widest mb-4 block">The Mission</span>
-               <h2 className="text-3xl md:text-5xl font-bold mb-8">Bridging the gap between manual drudgery and high-scale output.</h2>
+               <h2 className="text-3xl md:text-5xl font-bold mb-8">Bridging the gap between manual tasks and efficient results.</h2>
             </div>
             
             <div className="max-w-3xl mx-auto space-y-8">
               <p className="text-lg md:text-xl text-text2 leading-relaxed">
-                I spent years watching businesses drown in manual work. Data entry, follow-ups, copy-paste between apps, endless status meetings about &ldquo;process.&rdquo;
+                I spent years watching businesses lose time to manual work. Data entry, follow-ups, and copy-pasting between apps.
               </p>
               <p className="text-lg md:text-xl text-text2 leading-relaxed">
-                Then I discovered what AI and automation could actually do—not in theory, but in production. I started building systems that replaced the drudgery and gave teams their time back.
+                Then I discovered what AI and automation can actually do, not just in theory, but in practice. I build systems that replace boring tasks so teams can focus on what matters.
               </p>
               <p className="text-lg md:text-xl text-text2 leading-relaxed p-6 glass rounded-2xl border-l-4 border-l-accent">
-                I work with small businesses and startups who need real automation—not expensive enterprise solutions that don't fit their budget or needs. My clients want systems that actually work without requiring a dedicated IT team.
+                I work with small businesses and startups who need real automation, not expensive enterprise solutions that don't fit their needs.
               </p>
               <p className="text-lg md:text-xl text-text2 leading-relaxed">
-                I don&apos;t do generic chatbots or useless dashboards. I build production-grade AI systems that integrate with your tools, follow your logic, and scale with your business.
+                I don't build simple chatbots. I build production-grade AI systems that work with your tools and scale with your business.
               </p>
             </div>
           </RevealOnScroll>
