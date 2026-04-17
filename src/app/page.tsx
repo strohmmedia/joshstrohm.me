@@ -16,7 +16,7 @@ const techStack = [
 ];
 
 const problemCards = [
-  { icon: "⏱️", title: "40+ hours lost weekly", description: "Manual data entry, follow-ups, and repetitive tasks eating your team's time." },
+  { icon: "⏱️", title: "Hours lost to busywork", description: "Manual data entry, follow-ups, and repetitive tasks eating your team's time." },
   { icon: "🥶", title: "Leads go cold", description: "Prospects slip through the cracks because there's no instant follow-up system." },
   { icon: "📊", title: "Tool overload", description: "Too many disconnected apps creating more work instead of less." },
   { icon: "💰", title: "Revenue left on the table", description: "Inefficient processes mean slower closes and wasted marketing spend." },
@@ -123,9 +123,9 @@ export default function Home() {
 
             <RevealOnScroll delay={400}>
               <div className="mt-16 pt-8 border-t border-border">
-                <p className="text-sm text-muted mb-4">Powering operations with</p>
+                <p className="text-sm text-muted mb-4">Tools I work with</p>
                 <div className="flex flex-wrap gap-6 opacity-50 grayscale">
-                  {["Notion", "Slack", "HubSpot", "Google Workspace", "Salesforce", "Zapier"].map((tool) => (
+                  {["Notion", "Slack", "Google Workspace", "Make", "Airtable", "Shopify"].map((tool) => (
                     <span key={tool} className="text-sm font-medium text-text2">{tool}</span>
                   ))}
                 </div>
@@ -215,19 +215,19 @@ export default function Home() {
         <Container>
           <RevealOnScroll>
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Results that speak</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">What I've helped with</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
                 <div className="text-center">
-                  <AnimatedCounter value="40+" />
+                  <AnimatedCounter value="5-10" />
                   <p className="text-text2 mt-2">hours saved/week</p>
                 </div>
                 <div className="text-center">
-                  <AnimatedCounter value="3x" />
-                  <p className="text-text2 mt-2">faster lead response</p>
+                  <AnimatedCounter value="Instant" />
+                  <p className="text-text2 mt-2">lead follow-up</p>
                 </div>
                 <div className="text-center">
-                  <AnimatedCounter value="<14" />
-                  <p className="text-text2 mt-2">days to live</p>
+                  <AnimatedCounter value="<7" />
+                  <p className="text-text2 mt-2">days to launch</p>
                 </div>
               </div>
             </div>

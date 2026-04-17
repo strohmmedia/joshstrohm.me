@@ -11,37 +11,37 @@ import CTABanner from "@/components/CTABanner";
 
 const caseStudies = [
   {
+    industry: "Consulting",
+    title: "Client Communication Automation",
+    summary: "Set up automated follow-up emails and meeting reminders for a solo consultant, so no lead or client falls through the cracks.",
+    metrics: [
+      { label: "Time saved", value: "5 hrs/week" },
+      { label: "Response time", value: "Instant" },
+      { label: "Missed follow-ups", value: "0" },
+    ],
+    tags: ["Google Workspace", "Make", "Email"],
+  },
+  {
     industry: "E-commerce",
-    title: "Order → Fulfillment Automation",
-    summary: "Automated the entire order-to-fulfillment pipeline for a 7-figure Shopify store, eliminating manual data entry and reducing errors.",
+    title: "Inventory Sync",
+    summary: "Connected a small Shopify store to their inventory system so orders update automatically without manual entry.",
     metrics: [
-      { label: "Time saved", value: "25 hrs/week" },
-      { label: "Error reduction", value: "98%" },
-      { label: "Fulfillment speed", value: "2x faster" },
+      { label: "Manual entries", value: "-90%" },
+      { label: "Order processing", value: "4x faster" },
+      { label: "Errors", value: "Near zero" },
     ],
-    tags: ["Shopify", "Zapier", "Slack", "Shipping API"],
+    tags: ["Shopify", "Make", "Spreadsheet"],
   },
   {
-    industry: "Professional Services",
-    title: "AI Lead Qualification + Routing",
-    summary: "Built an intelligent lead qualification system that scores, enriches, and routes prospects to the right team members automatically.",
+    industry: "Freelancer",
+    title: "Proposal & Invoice Workflow",
+    summary: "Created a system that automatically sends proposals and follows up, then generates invoices when clients accept.",
     metrics: [
-      { label: "Lead response", value: "Instant" },
-      { label: "Qualification rate", value: "3x" },
-      { label: "Conversion increase", value: "40%" },
+      { label: "Time on admin", value: "-60%" },
+      { label: "Proposal time", value: "10 min" },
+      { label: "Follow-ups", value: "Automated" },
     ],
-    tags: ["n8n", "OpenAI", "HubSpot", "CRM"],
-  },
-  {
-    industry: "SaaS",
-    title: "Onboarding Automation",
-    summary: "Created a personalized onboarding workflow that adapts based on user behavior, reducing time-to-value and improving retention.",
-    metrics: [
-      { label: "Setup time", value: "-65%" },
-      { label: "User activation", value: "+45%" },
-      { label: "Support tickets", value: "-30%" },
-    ],
-    tags: ["Custom", "Segment", "Intercom", "Notion"],
+    tags: ["Notion", "Google Docs", "Stripe"],
   },
 ];
 
