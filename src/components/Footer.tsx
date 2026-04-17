@@ -97,10 +97,10 @@ export default function Footer() {
           </p>
           <div className="flex gap-6">
             <a
-              href="mailto:hello@joshstrohm.me"
+              href="mailto:hi@joshstrohm.me"
               className="text-sm text-text2 hover:text-[#2dd4bf] transition-colors"
             >
-              hello@joshstrohm.me
+              hi@joshstrohm.me
             </a>
           </div>
         </div>
