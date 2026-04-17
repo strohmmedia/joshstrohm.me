@@ -72,7 +72,7 @@ function RevealOnScroll({ children, delay = 0 }: { children: React.ReactNode; de
 
 function AnimatedCounter({ value, suffix = "" }: { value: string; suffix?: string }) {
   return (
-    <div className="text-4xl md:text-5xl font-bold gradient-text">
+    <div className="text-4xl md:text-5xl font-bold">
       {value}{suffix}
     </div>
   );
@@ -99,7 +99,7 @@ export default function Home() {
             <RevealOnScroll delay={100}>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mb-6">
                 I build the{" "}
-                <span className="gradient-text">AI systems</span>
+                <span>AI systems</span>
                 {" "}that run your business.
               </h1>
             </RevealOnScroll>

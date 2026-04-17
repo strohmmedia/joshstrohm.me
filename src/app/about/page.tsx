@@ -71,7 +71,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <RevealOnScroll>
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                <span className="gradient-text">The person behind the systems.</span>
+                The person behind the systems.
               </h1>
               <p className="text-xl text-text2">
                 Hi, I'm Josh Strohm. I help small businesses and startups eliminate manual work through smart AI automation.
