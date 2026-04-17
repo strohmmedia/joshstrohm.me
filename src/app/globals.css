@@ -1,6 +1,6 @@
+@import url('https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=jetbrains-mono@400,500&display=swap');
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-@import url('https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=jetbrains-mono@400,500&display=swap');
 
 :root {
   --bg: #050505;
