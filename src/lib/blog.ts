@@ -11,6 +11,7 @@ export interface BlogPost {
   excerpt: string;
   readTime: string;
   featured: boolean;
+  image?: string;
   content: string;
 }
 
@@ -35,6 +36,7 @@ export function getAllPosts(): BlogPost[] {
         excerpt: data.excerpt,
         readTime: data.readTime,
         featured: data.featured || false,
+        image: data.image || null,
         content,
       };
     });
@@ -59,6 +61,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
     excerpt: data.excerpt,
     readTime: data.readTime,
     featured: data.featured || false,
+    image: data.image || null,
     content,
   };
 }
