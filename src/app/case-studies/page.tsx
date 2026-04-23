@@ -133,7 +133,7 @@ export default function CaseStudiesPage() {
             <div className="mt-16 text-center p-8 border border-dashed border-border rounded-2xl">
               <p className="text-lg text-text2 mb-4">More case studies coming soon</p>
               <Link href="/contact">
-                <Button>Get Your Free Audit</Button>
+                <Button>Get Your AI Assessment</Button>
               </Link>
             </div>
           </RevealOnScroll>

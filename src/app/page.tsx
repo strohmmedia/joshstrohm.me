@@ -11,8 +11,13 @@ import Button from "@/components/ui/Button";
 import CTABanner from "@/components/CTABanner";
 
 const techStack = [
-  "n8n", "Make", "Zapier", "OpenAI", "Anthropic", "Notion", "Slack",
-  "HubSpot", "Salesforce", "Airtable", "Supabase", "Postgres", "Python", "Node"
+  "Claude Code", "n8n", "Make", "Zapier",
+  "OpenAI", "Anthropic", "CrewAI", "LangChain", "LlamaIndex",
+  "Cursor", "VS Code", "Python", "Node.js",
+  "Supabase", "Postgres", "Redis",
+  "Notion", "Slack",
+  "Airtable", "HubSpot", "Salesforce", "Zoho",
+  "Pipedream", "Bardeen", "Relevance AI", "Lindy AI"
 ];
 
 const problemCards = [
@@ -106,14 +111,14 @@ export default function Home() {
             
             <RevealOnScroll delay={200}>
               <p className="text-xl md:text-2xl text-text2 leading-relaxed mb-8 max-w-2xl">
-                I build custom workflows and AI agents that fit how your business actually works.
+                Custom workflows, intelligent agents, and automations engineered for how your company actually operates.
               </p>
             </RevealOnScroll>
             
             <RevealOnScroll delay={300}>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact">
-                  <Button size="lg">Get Your Free Audit →</Button>
+                  <Button size="lg">Get Your AI Assessment →</Button>
                 </Link>
                 <Button variant="secondary" size="lg" onClick={scrollToServices}>
                   See What I Build
@@ -125,7 +130,7 @@ export default function Home() {
               <div className="mt-16 pt-8 border-t border-border">
                 <p className="text-sm text-muted mb-4">Tools I work with</p>
                 <div className="flex flex-wrap gap-6 opacity-50 grayscale">
-                  {["Notion", "Slack", "Google Workspace", "Make", "Airtable", "Shopify"].map((tool) => (
+                  {["Claude Code", "n8n", "Make", "Zapier", "Notion", "Slack", "Cursor", "Supabase", "PostgreSQL"].map((tool) => (
                     <span key={tool} className="text-sm font-medium text-text2">{tool}</span>
                   ))}
                 </div>
@@ -140,7 +145,7 @@ export default function Home() {
         <Container>
           <RevealOnScroll>
             <h2 className="text-3xl md:text-4xl font-bold mb-12 max-w-2xl">
-              Your team is losing time to work that can be automated.
+              Your team is drowning in work that shouldn&apos;t require a human.
             </h2>
           </RevealOnScroll>
           
@@ -163,7 +168,7 @@ export default function Home() {
         <Container>
           <RevealOnScroll>
             <h2 className="text-3xl md:text-4xl font-bold mb-12">
-              Four services to help your business run more efficiently.
+              Four services. One outcome: your business runs cleaner.
             </h2>
           </RevealOnScroll>
           
@@ -235,7 +240,7 @@ export default function Home() {
           
           <RevealOnScroll delay={200}>
             <blockquote className="text-xl md:text-2xl text-text text-center max-w-2xl mx-auto italic border-l-4 border-accent pl-6">
-              &ldquo;If it doesn&apos;t save time or make money, I don&apos;t build it.&rdquo;
+              &ldquo;If it doesn&apos;t save time or make money, it doesn&apos;t ship.&rdquo;
               <footer className="text-base text-text2 mt-4 not-italic">- Josh Strohm</footer>
             </blockquote>
           </RevealOnScroll>

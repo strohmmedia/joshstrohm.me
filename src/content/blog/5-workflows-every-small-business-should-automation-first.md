@@ -4,7 +4,7 @@ date: "2026-04-12"
 excerpt: "Not all automation is equal. Here's which processes deliver the biggest ROI when you automate them first."
 readTime: "6 min read"
 featured: true
-image: "/images/blog/my-photo.jpg"
+image: "/images/blog/5_workflows_for_businesses.jpg"
 ---
 
 ## Not All Automation Is Equal

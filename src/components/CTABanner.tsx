@@ -11,15 +11,14 @@ export default function CTABanner() {
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-6">
-            Ready to automate what slows you down?
+            Ready to automate the things that slow you down?
           </h2>
           <p className="text-lg text-text2 mb-8">
-            Get your free automation audit. No calls needed. I will respond
-            within 24 hours.
+            Get your free AI assessment. No calls required-I&apos;ll respond within 24 hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg">Get Your Free Audit</Button>
+              <Button size="lg">Get Your AI Assessment</Button>
             </Link>
             <Link href="/services">
               <Button variant="secondary" size="lg">See What I Build</Button>

@@ -95,7 +95,7 @@ Core promise:
 “I build custom AI automations and agents that remove manual work, speed up revenue workflows, and make operations scalable.”
 
 Primary CTA:
-“Get Your Free Automation Audit” (no call required)
+“Get Your AI Assessment” (no call required)
 
 Secondary CTA:
 “See What I Build”
@@ -147,7 +147,7 @@ Results:
   - 3x faster lead response
   - < 14 days to live
 - Quote block:
-  “If it doesn’t save real time or make real money, it doesn’t ship.” — Josh Strohm
+  “If it doesn’t save time or make money, it doesn’t ship.” — Josh Strohm
 
 Tech marquee:
 - smooth infinite scroll list of tools (n8n, Make, Zapier, OpenAI, Anthropic, Notion, Slack, HubSpot, Salesforce, Airtable, Supabase, Postgres, Python, Node)

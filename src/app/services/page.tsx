@@ -64,7 +64,7 @@ const comparison = [
   { feature: "Setup time", diy: "20+ hours", inhouse: "2-4 weeks", josh: "1-2 weeks" },
   { feature: "Customization", diy: "Limited", inhouse: "Full", josh: "Full" },
   { feature: "Ongoing support", diy: "You", inhouse: "Included", josh: "Included" },
-  { feature: "Cost structure", diy: "Low cost, high time", inhouse: "$80k+/year", josh: "$3k-10k/project" },
+  { feature: "Cost structure", diy: "Low upfront, high time", inhouse: "$80k+/year", josh: "$1k-10k/project" },
   { feature: "Maintenance", diy: "You", inhouse: "Included", josh: "Included" },
 ];
 
