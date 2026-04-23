@@ -247,7 +247,7 @@ export default function ContactPage() {
                       </div>
 
                       <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
-                        {isSubmitting ? "Sending..." : "Get My Free Audit →"}
+                        {isSubmitting ? "Sending..." : "Get My Free AI Assessment →"}
                       </Button>
                     </form>
                   )}
