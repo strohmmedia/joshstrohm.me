@@ -15,7 +15,7 @@ const footerLinks = {
     { href: "/contact", label: "Contact" },
   ],
   resources: [
-    { href: "/contact", label: "Free Audit" },
+    { href: "/ai-assessment", label: "Free AI Assessment" },
     { href: "/blog", label: "Latest Posts" },
   ],
 };
