@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:strohmmedia.com)",
+      "Bash(npm run *)",
+      "Bash(curl -s https://strohmmedia.com/ai-assessment)"
+    ]
+  }
+}
