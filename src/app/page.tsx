@@ -117,7 +117,7 @@ export default function Home() {
             
             <RevealOnScroll delay={300}>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/contact">
+                <Link href="/ai-assessment">
                   <Button size="lg">Get Your AI Assessment →</Button>
                 </Link>
                 <Button variant="secondary" size="lg" onClick={scrollToServices}>
