@@ -17,7 +17,7 @@ export default function CTABanner() {
             Get your free AI assessment. No calls required-I&apos;ll respond within 24 hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <Link href="/ai-assessment">
               <Button size="lg">Get Your AI Assessment</Button>
             </Link>
             <Link href="/services">
