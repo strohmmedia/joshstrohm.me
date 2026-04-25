@@ -111,11 +111,7 @@ export default function Home() {
             
             <RevealOnScroll delay={200}>
               <p className="text-xl md:text-2xl text-text2 leading-relaxed mb-8 max-w-2xl">
-<<<<<<< HEAD
-                Custom workflows, intelligent agents, and automations engineered for how your company actually operates.
-=======
-                I build AI systems that adapt to how your business operates, not the opposite.
->>>>>>> 211eda5 (fixed the hamburger menu)
+Custom workflows, intelligent agents, and automations engineered for how your company actually operates.
               </p>
             </RevealOnScroll>
             
