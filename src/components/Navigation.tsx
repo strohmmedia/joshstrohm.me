@@ -16,6 +16,7 @@ const navLinks = [
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
 
@@ -24,9 +25,20 @@ export default function Navigation() {
       setScrolled(window.scrollY > 50);
     };
 
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [pathname]);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen((open) => !open);
+  };
 
   if (pathname === "/ai-assessment") return null;
 
@@ -53,11 +65,7 @@ export default function Navigation() {
                 key={link.href}
                 href={link.href}
                 className={`text-sm font-medium transition-colors hover:text-[#2dd4bf] ${
-                  pathname === link.href
-                    ? "text-accent"
-                    : isHome && !scrolled
-                    ? "text-text2"
-                    : "text-text2"
+                  pathname === link.href ? "text-accent" : "text-text2"
                 }`}
               >
                 {link.label}
@@ -72,22 +80,63 @@ export default function Navigation() {
           </div>
 
           <button
+            type="button"
             className="md:hidden p-2 text-text2 hover:text-text"
             aria-label="Menu"
+            aria-expanded={mobileMenuOpen}
+            onClick={toggleMobileMenu}
           >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M3 12h18M3 6h18M3 18h18" />
-            </svg>
+            {mobileMenuOpen ? (
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path d="M6 6l12 12M6 18L18 6" />
+              </svg>
+            ) : (
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path d="M3 12h18M3 6h18M3 18h18" />
+              </svg>
+            )}
           </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-bg/95 backdrop-blur-xl border-b border-border">
+          <div className="px-4 py-4 space-y-3">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`block py-2 text-sm font-medium transition-colors hover:text-[#2dd4bf] ${
+                  pathname === link.href ? "text-accent" : "text-text2"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+
+            <Link href="/contact" className="block pt-2">
+              <Button size="sm" className="w-full">
+                Get Started
+              </Button>
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
