@@ -102,7 +102,7 @@ export default async function BlogPostPage({ params }: Props) {
         <Container>
           <div className="text-center">
             <p className="text-lg text-text2 mb-4">Want to automate your workflows?</p>
-            <Link href="/contact">
+            <Link href="/ai-assessment">
               <Button>Get Your AI Assessment</Button>
             </Link>
           </div>
