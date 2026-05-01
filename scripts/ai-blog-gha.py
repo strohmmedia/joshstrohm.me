@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
-GitHub Actions runner for AI blog automation (push to main).
-Generates a draft and commits directly to main.
+AI Blog generator (image + post) for CI.
 """
 import datetime, os, re, sys, subprocess, random, requests
 
@@ -15,25 +14,18 @@ LLM_API_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 def slugify(title: str) -> str:
     s = title.lower()
-    s = SLUGIFY_RE.sub('', s)
-    s = re.sub(r'[-\s]+', '-', s)
-    return s.strip('-')
+    s = SLUGIFY_RE.sub("", s)
+    s = re.sub(r"[-\s]+", "-", s)
+    return s.strip("-")
 
 def pick_topic():
     topics_file = os.path.join(REPO_ROOT, "topics.txt")
     if os.path.isfile(topics_file):
         with open(topics_file) as f:
-            topics = [line.strip() for line in f if line.strip()]
+            topics = [ln.strip() for ln in f if ln.strip()]
         if topics:
             return random.choice(topics)
-    defaults = [
-        "AI automation for local SMBs — 3 quick wins",
-        "How to reduce admin work with AI tools",
-        "Stop losing leads: simple automation for service businesses",
-        "3 workflow automations that save 10 hours a week",
-        "AI-powered follow-ups that close more deals"
-    ]
-    return random.choice(defaults)
+    return "AI automation for local SMBs — 3 quick wins"
 
 def call_llm(system: str, user: str):
     headers = {
@@ -60,19 +52,34 @@ def call_llm(system: str, user: str):
         return None
 
 def generate_post(title):
-    system = """You're an expert writer for SMBs. Write an engaging, practical blog post.
-Tone: approachable and professional. Use short paragraphs and actionable steps.
-Output ONLY the post body (no frontmatter)."""
+    system = ("You're an expert writer for SMBs. Write a clear, engaging blog post. "
+              "Tone: approachable and professional. Use short paragraphs and actionable steps. "
+              "Output ONLY the post body (no frontmatter).")
     user = f"Topic: {title}\nWrite a ~500-800 word post: hook, 3-4 practical sections, closing next steps."
     body = call_llm(system, user)
     if not body:
-        body = f"(Generated post for {title})\n\nThis section contains practical automation ideas for {title}."
+        body = f"(Practical automation ideas for {title})\n\nContent draft."
     return body
 
-def create_post(title, body):
+def generate_image(title):
+    # call helper script
+    cmd = [sys.executable, os.path.join(REPO_ROOT, "scripts", "generate_image.py"), title]
+    try:
+        out = subprocess.check_output(cmd, stderr=subprocess.STDOUT, text=True).strip()
+        if out and os.path.exists(os.path.join(REPO_ROOT, out)):
+            return out
+    except Exception as e:
+        print(f"Image generation failed: {e}")
+    # fallback static reference (will 404 if missing) - better to commit a placeholder
+    return f"/images/blog/{slugify(title)}.jpg"
+
+def create_post(title):
     os.makedirs(os.path.join(REPO_ROOT, POSTS_DIR), exist_ok=True)
     today = datetime.date.today().isoformat()
     slug = slugify(title)
+    body = generate_post(title)
+    img_rel = generate_image(title)
+
     filename = f"{today}-{slug}.md"
     path = os.path.join(REPO_ROOT, POSTS_DIR, filename)
     i = 1
@@ -80,14 +87,18 @@ def create_post(title, body):
         filename = f"{today}-{slug}-{i}.md"
         path = os.path.join(REPO_ROOT, POSTS_DIR, filename)
         i += 1
+
     rt = max(1, round(len(body.split()) / 200))
+    # ensure img_rel starts with / if it's a public path
+    if not img_rel.startswith("/"):
+        img_rel = "/" + img_rel
     fm = f"""---
 title: "{title}"
 date: "{today}"
 excerpt: "Practical automation tips and quick wins for modern businesses."
 readTime: "{rt} min read"
 featured: false
-image: "/images/blog/{slug}.jpg"
+image: "{img_rel}"
 ---
 
 """
@@ -98,8 +109,7 @@ image: "/images/blog/{slug}.jpg"
 def main():
     title = pick_topic()
     print(f"Topic: {title}")
-    body = generate_post(title)
-    p = create_post(title, body)
+    p = create_post(title)
     print(f"Created: {p}")
 
 if __name__ == "__main__":

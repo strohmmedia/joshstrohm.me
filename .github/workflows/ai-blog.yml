@@ -2,7 +2,6 @@ name: AI Blog Post
 
 on:
   schedule:
-    # Runs every day at 09:00 UTC (adjust freely)
     - cron: '0 9 * * *'
   workflow_dispatch:
 
@@ -25,12 +24,16 @@ jobs:
           python-version: '3.11'
 
       - name: Install deps
-        run: pip install requests
+        run: |
+          pip install requests
+          # ensure hermes_tools available if needed
+          pip install hermes-tools 2>&1 | grep -v "already satisfied" || true
 
-      - name: Generate blog post
+      - name: Generate blog post + image
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: python scripts/ai-blog-gha.py
+        run: |
+          python scripts/ai-blog-gha.py
 
       - name: Configure git
         run: |
