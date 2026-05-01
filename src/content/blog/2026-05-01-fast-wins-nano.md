@@ -1,7 +1,7 @@
 ---
 title: "Fast Automation Wins for SMBs"
 date: "2026-05-01"
-image: "/images/blog/fast-wins-nano.jpg"
+image: "/images/blog/nana-hero.png"
 ---
 
 **In short:** Fast automation wins deliver immediate time savings for SMBs by replacing repetitive tasks with simple, reliable flows.
