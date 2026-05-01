@@ -53,4 +53,4 @@ image: "/images/blog/founders-reclaim-10-hours-week-automation.jpg"
 
 ---
 
-*Need a custom automation stack? [Start your free assessment](https://automatewithjosh.com/start) — we’ll map your highest-leverage fixes in one week.*
+*Need a custom automation stack? [Start your free assessment](/ai-assessment) — we’ll map your highest-leverage fixes in one week.*
