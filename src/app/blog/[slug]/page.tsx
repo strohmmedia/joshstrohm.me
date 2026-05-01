@@ -3,6 +3,7 @@ import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
 import { remark } from "remark";
 import html from "remark-html";
@@ -68,7 +69,23 @@ export default async function BlogPostPage({ params }: Props) {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             {post.title}
           </h1>
-          <p className="text-text2">{post.date}</p>
+          <div className="flex items-center gap-3 text-text2 mb-8">
+            <span>{post.date}</span>
+            <span className="text-border">•</span>
+            <span>{post.readTime}</span>
+          </div>
+          
+          {post.image && (
+            <div className="relative w-full h-[300px] md:h-[450px] lg:h-[600px] rounded-2xl overflow-hidden mb-12 border border-border/50">
+              <Image 
+                src={post.image} 
+                alt={post.title} 
+                fill 
+                priority
+                className="object-cover"
+              />
+            </div>
+          )}
         </Container>
       </Section>
 
