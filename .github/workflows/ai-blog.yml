@@ -2,13 +2,12 @@ name: AI Blog Post
 
 on:
   schedule:
-    # Runs every day at 09:00 UTC (adjust as needed)
+    # Runs every day at 09:00 UTC (adjust freely)
     - cron: '0 9 * * *'
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: write   # allow push to main
 
 jobs:
   create-post:
@@ -18,6 +17,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.GIT_PUSH_TOKEN || secrets.GITHUB_TOKEN }}
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -32,15 +32,15 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: python scripts/ai-blog-gha.py
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Add: AI generated blog post"
-          branch: ai-blog/auto-${{ github.run_id }}
-          title: "🤖 AI Blog Post - ${{ github.run_number }}"
-          body: |
-            This PR contains an AI-generated blog post.
-            - Netlify will deploy a preview on merge.
-            - Please review before merging to main.
-          labels: automated
+      - name: Configure git
+        run: |
+          git config user.name "AI Blog Bot"
+          git config user.email "ai-blog@hermes.agent"
+
+      - name: Push to main
+        run: |
+          git checkout main || git checkout -b main
+          git add -A
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "🤖 AI Blog - $(date -I)" || echo "Nothing to commit"
+          git push origin main
