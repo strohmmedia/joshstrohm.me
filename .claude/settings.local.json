@@ -3,7 +3,10 @@
     "allow": [
       "WebFetch(domain:strohmmedia.com)",
       "Bash(npm run *)",
-      "Bash(curl -s https://strohmmedia.com/ai-assessment)"
+      "Bash(curl -s https://strohmmedia.com/ai-assessment)",
+      "Bash(git merge *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Fix: update AI assessment link to absolute URL on blog posts *)"
     ]
   }
 }
