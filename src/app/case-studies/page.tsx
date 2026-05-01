@@ -132,7 +132,7 @@ export default function CaseStudiesPage() {
           <RevealOnScroll delay={300}>
             <div className="mt-16 text-center p-8 border border-dashed border-border rounded-2xl">
               <p className="text-lg text-text2 mb-4">More case studies coming soon</p>
-              <Link href="/contact">
+              <Link href="/ai-assessment">
                 <Button>Get Your AI Assessment</Button>
               </Link>
             </div>
