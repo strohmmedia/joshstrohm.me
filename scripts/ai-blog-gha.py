@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-AI Blog generator (image + post) for CI.
+AI Blog generator (image + post). Saves post to src/content/blog,
+image to public/images/blog.
 """
 import datetime, os, re, sys, subprocess, random, requests
 
@@ -48,7 +49,7 @@ def call_llm(system: str, user: str):
         r.raise_for_status()
         return r.json()["choices"][0]["message"]["content"].strip()
     except Exception as e:
-        print(f"LLM error: {e}")
+        print(f"LLM error: {e}", file=sys.stderr)
         return None
 
 def generate_post(title):
@@ -62,16 +63,15 @@ def generate_post(title):
     return body
 
 def generate_image(title):
-    # call helper script
     cmd = [sys.executable, os.path.join(REPO_ROOT, "scripts", "generate_image.py"), title]
     try:
         out = subprocess.check_output(cmd, stderr=subprocess.STDOUT, text=True).strip()
         if out and os.path.exists(os.path.join(REPO_ROOT, out)):
             return out
     except Exception as e:
-        print(f"Image generation failed: {e}")
-    # fallback static reference (will 404 if missing) - better to commit a placeholder
-    return f"/images/blog/{slugify(title)}.jpg"
+        print(f"Image generation failed: {e}", file=sys.stderr)
+    # fallback path
+    return f"public/images/blog/{slugify(title)}.jpg"
 
 def create_post(title):
     os.makedirs(os.path.join(REPO_ROOT, POSTS_DIR), exist_ok=True)
@@ -79,6 +79,9 @@ def create_post(title):
     slug = slugify(title)
     body = generate_post(title)
     img_rel = generate_image(title)
+
+    # frontmage path should be web path (public served at /)
+    web_path = "/" + img_rel if not img_rel.startswith("/") else img_rel
 
     filename = f"{today}-{slug}.md"
     path = os.path.join(REPO_ROOT, POSTS_DIR, filename)
@@ -89,16 +92,13 @@ def create_post(title):
         i += 1
 
     rt = max(1, round(len(body.split()) / 200))
-    # ensure img_rel starts with / if it's a public path
-    if not img_rel.startswith("/"):
-        img_rel = "/" + img_rel
     fm = f"""---
 title: "{title}"
 date: "{today}"
 excerpt: "Practical automation tips and quick wins for modern businesses."
 readTime: "{rt} min read"
 featured: false
-image: "{img_rel}"
+image: "{web_path}"
 ---
 
 """
