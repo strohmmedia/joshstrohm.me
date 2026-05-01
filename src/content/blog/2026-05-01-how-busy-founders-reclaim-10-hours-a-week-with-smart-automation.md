@@ -1,7 +1,7 @@
 ---
 title: "How busy founders reclaim 10+ hours a week with smart automation"
 description: "A practical, methodology-driven guide to replacing manual admin with lightweight automation so you can focus on growth — not grunt work."
-date: 2026-05-01
+date: "2026-05-01"
 image: "/images/blog/founders-reclaim-10-hours-week-automation.jpg"
 ---
 
