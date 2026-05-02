@@ -27,14 +27,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-4">
             <Link href="/" className="block">
-              <img src="/JoshStrohm_Wordmark_nobg.png" alt="Josh Strohm" className="h-10 w-auto object-contain" />
+              <img src="/JoshStrohm_Wordmark_nobg.png" alt="Josh Strohm" className="h-40 w-auto object-contain" />
             </Link>
             <p className="text-text2 text-sm leading-relaxed">
               I build custom AI tools and agents that stop manual work and help
               you grow.
             </p>
             <Link href="/" className="block mt-2">
-              <img src="/JoshStrohm_Wordmark_nobg.png" alt="Josh Strohm" className="h-10 w-auto object-contain" />
+              <img src="/JoshStrohm_Wordmark_nobg.png" alt="Josh Strohm" className="h-40 w-auto object-contain" />
             </Link>
           </div>
 
