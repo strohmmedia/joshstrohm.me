@@ -4,13 +4,21 @@ import { useEffect, useRef, useState } from "react";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import Card from "@/components/ui/Card";
+import Badge from "@/components/ui/Badge";
 import CTABanner from "@/components/CTABanner";
+import ParticleNetwork from "@/components/ParticleNetwork";
 
 function RevealOnScroll({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (mediaQuery.matches) {
+      setIsVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -101,42 +109,51 @@ export default function HermesPage() {
   return (
     <>
       {/* Hero */}
-      <Section className="pt-32 pb-16">
+      <section className="relative min-h-screen flex items-center pt-20">
+        <ParticleNetwork />
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <RevealOnScroll>
-              <div className="text-6xl mb-6">🤖</div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Meet Hermes.
+              <Badge className="mb-6">AUTONOMOUS AI AGENT</Badge>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mb-6">
+                Meet{" "}
+                <span className="gradient-text">Hermes.</span>
               </h1>
-              <p className="text-xl text-text2 mb-6">
-                Your autonomous AI agent that works while you sleep. Hermes handles complex multi-step tasks, integrates with your tools, and delivers results—not just updates.
+              <p className="text-xl md:text-2xl text-text2 leading-relaxed mb-6 max-w-xl">
+                Your{" "}
+                <span className="gradient-text font-semibold">autonomous AI agent</span>
+                {" "}that works while you sleep. Hermes handles complex multi-step tasks, integrates with your tools, and delivers results—not just updates.
               </p>
-              <p className="text-lg text-text2">
-                Built on Claude, Hermes combines reasoning with action. It doesn&apos;t just chat—it does.
+              <p className="text-lg text-text2 max-w-xl">
+                Built on{" "}
+                <span className="gradient-text font-semibold">Claude</span>
+                {", "}Hermes combines reasoning with action. It doesn&apos;t just chat—it does.
               </p>
             </RevealOnScroll>
             <RevealOnScroll delay={200}>
-              <Card variant="glass" className="p-8 font-mono text-sm">
-                <div className="space-y-2">
+              <Card variant="glass" className="p-8 font-mono text-sm relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-accent3/5 rounded-2xl pointer-events-none" />
+                <div className="relative space-y-2">
                   <div className="text-text2">$ hermes --version</div>
-                  <div className="text-accent">Hermes v2.4.1 (Claude 3.5 Sonnet)</div>
+                  <div className="gradient-text">Hermes v2.4.1 (Claude 3.5 Sonnet)</div>
                   <div className="h-px bg-border my-4" />
                   <div className="text-text2">$ hermes status</div>
-                  <div className="text-accent">● Running | 3 active tasks</div>
+                  <div className="gradient-text">● Running | 3 active tasks</div>
                   <div className="text-text2 mt-4">$ _</div>
                 </div>
               </Card>
             </RevealOnScroll>
           </div>
         </Container>
-      </Section>
+      </section>
 
       {/* Capabilities */}
       <Section className="bg-surface">
         <Container>
           <RevealOnScroll>
-            <h2 className="text-3xl font-bold mb-4">What Hermes does</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              What <span className="gradient-text">Hermes</span> does
+            </h2>
             <p className="text-lg text-text2 mb-12 max-w-2xl">
               Hermes is an AI agent designed for real work—not demos. It handles the tasks that traditionally required a dedicated person or team.
             </p>
@@ -160,7 +177,9 @@ export default function HermesPage() {
       <Section>
         <Container>
           <RevealOnScroll>
-            <h2 className="text-3xl font-bold mb-4">See it in action</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              See it in <span className="gradient-text">action</span>
+            </h2>
             <p className="text-lg text-text2 mb-12 max-w-2xl">
               Watch Hermes work through a real task—from setup to completion.
             </p>
