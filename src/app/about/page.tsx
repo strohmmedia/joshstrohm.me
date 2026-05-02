@@ -80,7 +80,7 @@ export default function AboutPage() {
             <RevealOnScroll delay={200}>
               <div className="relative aspect-square max-w-md mx-auto lg:max-w-none">
                 <Image
-                  src="/my_photo.jpg"
+                  src="/me_new.png"
                   alt="Josh Strohm"
                   fill
                   className="object-cover object-center md:object-top rounded-2xl"
