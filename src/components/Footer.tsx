@@ -34,6 +34,9 @@ export default function Footer() {
               I build custom AI tools and agents that stop manual work and help
               you grow.
             </p>
+            <Link href="/" className="relative w-32 h-20 block mt-2">
+              <Image src="/logo.png" alt="Josh Strohm" fill className="object-contain" />
+            </Link>
           </div>
 
           <div>
