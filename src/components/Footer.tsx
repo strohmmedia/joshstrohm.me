@@ -26,9 +26,6 @@ export default function Footer() {
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-4">
-            <Link href="/" className="block">
-              <img src="/JoshStrohm_Wordmark_nobg.png" alt="Josh Strohm" className="h-40 w-auto object-contain" />
-            </Link>
             <p className="text-text2 text-sm leading-relaxed">
               I build custom AI tools and agents that stop manual work and help
               you grow.
