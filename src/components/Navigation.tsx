@@ -53,8 +53,8 @@ export default function Navigation() {
     >
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link href="/" className="relative w-40 h-12">
-            <Image src="/JoshStrohm_Wordmark_nobg.png" alt="Josh Strohm" fill className="object-contain" priority={true} sizes="160px" />
+          <Link href="/" className="flex items-center">
+            <img src="/JoshStrohm_Wordmark_nobg.png" alt="Josh Strohm" className="h-10 w-auto object-contain" />
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
