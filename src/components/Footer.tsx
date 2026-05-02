@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const footerLinks = {
   services: [
@@ -26,8 +27,8 @@ export default function Footer() {
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-4">
-            <Link href="/" className="text-2xl font-bold text-text">
-              JS
+            <Link href="/" className="relative w-16 h-10">
+              <Image src="/logo.png" alt="Josh Strohm" fill className="object-contain" />
             </Link>
             <p className="text-text2 text-sm leading-relaxed">
               I build custom AI tools and agents that stop manual work and help

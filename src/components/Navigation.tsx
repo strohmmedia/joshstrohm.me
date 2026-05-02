@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 
 const navLinks = [
@@ -53,11 +54,8 @@ export default function Navigation() {
     >
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link
-            href="/"
-            className="text-4xl font-bold text-text hover:text-[#2dd4bf] transition-colors"
-          >
-            JS
+          <Link href="/" className="relative w-16 h-10">
+            <Image src="/logo.png" alt="Josh Strohm" fill className="object-contain" />
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
