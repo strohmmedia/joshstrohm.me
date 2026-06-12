@@ -71,7 +71,7 @@ export default function ContactPage() {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch("https://n8n.srv945929.hstgr.cloud/webhook/c537f342-3791-4c51-b68c-6a8dfa77e3bb", {
+      const response = await fetch("https://n8n.strohmpartners.com/webhook/c537f342-3791-4c51-b68c-6a8dfa77e3bb", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
