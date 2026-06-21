@@ -1,6 +1,12 @@
 import Link from "next/link";
 
-const footerLinks = {
+type FooterLink = {
+  href: string;
+  label: string;
+  external?: boolean;
+};
+
+const footerLinks: Record<string, FooterLink[]> = {
   services: [
     { href: "/services", label: "Services" },
     { href: "/services#workflows", label: "AI Workflow Automation" },
@@ -15,7 +21,7 @@ const footerLinks = {
     { href: "/contact", label: "Contact" },
   ],
   resources: [
-    { href: "/ai-assessment", label: "Free AI Assessment" },
+    { href: "https://theurl.site/ai-assessment", label: "Free AI Assessment", external: true },
     { href: "/blog", label: "Latest Posts" },
   ],
 };
@@ -42,12 +48,23 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.href + link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-text2 hover:text-[#2dd4bf] transition-colors"
-                  >
-                    {link.label}
-                  </Link>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-text2 hover:text-[#2dd4bf] transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-sm text-text2 hover:text-[#2dd4bf] transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -60,12 +77,23 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.href + link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-text2 hover:text-[#2dd4bf] transition-colors"
-                  >
-                    {link.label}
-                  </Link>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-text2 hover:text-[#2dd4bf] transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-sm text-text2 hover:text-[#2dd4bf] transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -78,12 +106,23 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.href + link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-text2 hover:text-[#2dd4bf] transition-colors"
-                  >
-                    {link.label}
-                  </Link>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-text2 hover:text-[#2dd4bf] transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-sm text-text2 hover:text-[#2dd4bf] transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

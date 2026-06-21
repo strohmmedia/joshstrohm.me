@@ -117,9 +117,9 @@ Custom workflows, intelligent agents, and automations engineered for how your co
             
             <RevealOnScroll delay={300}>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/ai-assessment">
+                <a href="https://theurl.site/ai-assessment" target="_blank" rel="noopener noreferrer">
                   <Button size="lg">Get Your AI Assessment →</Button>
-                </Link>
+                </a>
                 <Button variant="secondary" size="lg" onClick={scrollToServices}>
                   See What I Build
                 </Button>
