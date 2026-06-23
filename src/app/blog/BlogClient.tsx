@@ -82,10 +82,10 @@ export default function BlogPageClient({ posts }: BlogClientProps) {
               Insights & Analysis
             </span>
             <h1 className="text-4xl md:text-5xl font-bold text-text mb-4 tracking-tight">
-              The Automation Blog
+              Agent Application
             </h1>
             <p className="text-lg text-text2 leading-relaxed">
-              Practical insights on AI automation, workflow optimization, and building systems that scale.
+              Practical insights on agentic AI, autonomous workflows, and building systems that think.
             </p>
           </div>
         </Container>
